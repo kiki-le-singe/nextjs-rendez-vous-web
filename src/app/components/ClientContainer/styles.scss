@@ -1,0 +1,85 @@
+@use "../../styles/colors.scss";
+@import "../../styles/fonts.scss";
+
+.Client-container {
+  gap: 16px;
+
+  .inputs-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    gap: 16px;
+  }
+
+  .create-client-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .step {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 18px;
+    padding-left: 36px;
+
+    &.info-client-container {
+      gap: 8px;
+
+      .ButtonLink {
+        padding-left: 0;
+      }
+
+      .Icon {
+        cursor: pointer;
+      }
+    }
+
+    &.specialities-container {
+      gap: 20px;
+
+      .speciality {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 4px;
+
+        .ButtonLink {
+          padding: 0;
+        }
+      }
+
+      span.infos {
+        @include regular-font;
+        @include normal-size;
+
+        color: colors.$border-color-dark;
+      }
+    }
+  }
+
+  .info-client {
+    flex: 1;
+    padding: 10px 12px;
+    background: colors.$background-white-color;
+    border: 1px solid colors.$border-color;
+    border-radius: 6px;
+
+    span {
+      @include regular-font;
+      @include small-size;
+
+      color: colors.$placeholder;
+    }
+
+    p {
+      @include regular-font;
+      @include normal-size;
+
+      color: colors.$text-color;
+    }
+  }
+}

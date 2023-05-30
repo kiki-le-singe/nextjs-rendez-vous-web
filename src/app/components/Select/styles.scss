@@ -1,0 +1,87 @@
+@use "../../styles/colors.scss";
+@import "../../styles/fonts.scss";
+
+.Select-container {
+  display: flex;
+
+  .select {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    height: 48px;
+    background: colors.$background-white-color;
+    border: 1px solid colors.$border-color;
+    border-radius: 6px;
+    overflow: hidden;
+
+    .left {
+      height: 100%;
+      width: 4px;
+
+      &.green {
+        background-color: colors.$green;
+      }
+
+      &.blue {
+        background-color: colors.$blue;
+      }
+    }
+    .middle {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      padding-left: 8px;
+
+      .placeholder {
+        @include regular-font;
+        @include small-size;
+
+        color: colors.$placeholder;
+      }
+
+      .value {
+        @include regular-font;
+        @include normal-size;
+
+        color: colors.$text-color;
+      }
+    }
+
+    .right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 36px;
+    }
+  }
+
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    background: colors.$background-white-color;
+    border: 1px solid colors.$border-color;
+    border-radius: 6px;
+    padding: 8px;
+
+    .option {
+      @include regular-font;
+      @include normal-size;
+
+      cursor: pointer;
+      color: colors.$placeholder;
+
+      &:hover {
+        color: colors.$text-color;
+      }
+    }
+  }
+}

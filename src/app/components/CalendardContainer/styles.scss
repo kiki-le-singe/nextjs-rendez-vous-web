@@ -1,0 +1,33 @@
+@use "../../styles/colors.scss";
+@import "../../styles/fonts.scss";
+
+.Calendard-container {
+  .column {
+    display: flex;
+    align-items: center;
+
+    .TextInput-container {
+      width: 300px;
+    }
+
+    &.left {
+      gap: 16px;
+
+      span.time {
+        @include semibold-font;
+        @include normal-size;
+
+        color: colors.$text-color;
+      }
+    }
+
+    &.right {
+      flex: 1;
+      justify-content: end;
+
+      .ButtonLink {
+        color: colors.$green;
+      }
+    }
+  }
+}

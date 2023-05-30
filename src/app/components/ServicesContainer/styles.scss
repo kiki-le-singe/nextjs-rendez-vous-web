@@ -1,0 +1,37 @@
+@use "../../styles/colors.scss";
+@import "../../styles/fonts.scss";
+
+.Services {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .add-service-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 18px;
+    border: 1px dashed colors.$border-dashed;
+    border-radius: 6px;
+
+    .ButtonLink {
+      padding: 0;
+      text-decoration: none;
+
+      .label {
+        @include semibold-font;
+
+        font-size: 13px;
+        line-height: 20px;
+        color: colors.$border-color-dark;
+      }
+    }
+  }
+
+  .add-text {
+    @include semibold-font;
+
+    color: colors.$border-color-dark;
+    font-size: 13px;
+  }
+}

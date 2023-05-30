@@ -1,0 +1,28 @@
+@use "../../../../styles/colors.scss";
+@import "../../../../styles/fonts.scss";
+
+.Tab-item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: colors.$background-grey-color;
+  cursor: pointer;
+  height: 48px;
+
+  &.selected-tab {
+    background-color: colors.$background-white-color;
+  }
+
+  .label {
+    @include regular-font;
+    @include normal-size;
+
+    text-align: center;
+    color: colors.$placeholder;
+
+    &.selected-label {
+      color: colors.$text-color;
+    }
+  }
+}

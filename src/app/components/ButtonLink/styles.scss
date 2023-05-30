@@ -1,0 +1,16 @@
+@use "../../styles/colors.scss";
+@import "../../styles/fonts.scss";
+
+.ButtonLink {
+  @include semibold-font;
+  @include normal-size;
+
+  display: flex;
+  gap: 6px;
+  background: none;
+  border: none;
+  color: colors.$text-color;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 10px;
+}
